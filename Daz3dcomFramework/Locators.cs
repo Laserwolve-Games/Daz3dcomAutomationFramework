@@ -14,9 +14,17 @@ namespace Daz3dcomFramework
             public static readonly By passwordField = By.XPath("//input[@id='pass']");
             public static readonly By loginButton = By.XPath("//button[@id='send2']");
         }
-        public class sortByDropdown
+        
+        public class shop
         {
-            public static readonly By lowToHigh = By.XPath("//option[text()='Price Low-High']");
+            public class sortByDropdown
+            {
+                public static readonly By priceLowHigh = By.XPath("//option[text()='Price Low-High']");
+            }
+            public static readonly By items = By.XPath("//li[@class='item']");
+            public static readonly By anItemsPrice = By.XPath("//div[contains(@class, '_price')]");
+            public static readonly By anItemsAddToCartButton = By.XPath("//div[@class='cart-options']");
         }
+        
     }
 }

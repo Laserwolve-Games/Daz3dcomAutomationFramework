@@ -1,3 +1,5 @@
+using OpenQA.Selenium;
+
 namespace Daz3dcomFramework.Scripts
 {
     public class Tests
@@ -14,37 +16,24 @@ namespace Daz3dcomFramework.Scripts
         [Test]
         public void GetFreeStuff()
         {
-            actions.SetURL(Data.dazShopURL);
+            actions.BrowseToShop();
 
-            actions.Wait();
+            actions.SignIn();
 
-            actions.Click(Locators.myAccountIcon);
-
-            actions.FillTextbox(Locators.AccountDropdown.emailAddressField, Data.emailAddress);
-
-            actions.FillTextbox(Locators.AccountDropdown.passwordField, Data.password);
-
-            actions.Click(Locators.AccountDropdown.loginButton);
-
-            actions.Wait();
-
-            actions.ScrollTo(Locators.sortBy);
-
-            actions.Click(Locators.sortBy);
-
-            actions.Click(Locators.sortByDropdown.lowToHigh);
+            actions.SortShopLowToHigh();
 
             // The free/cheapest items will display, but it'll include items already owned. Refresh the page, then repeat the previous steps to exclude them.
 
             actions.Refresh();
 
-            actions.Wait();
+            actions.SortShopLowToHigh();
 
-            actions.ScrollTo(Locators.sortBy);
+            List<IWebElement> buttons = actions.GetAddToCartButtons(actions.GetItemsByPrice(5, actions.ConvertElementCollectionToList(actions.GetElements(Locators.shop.items))));
 
-            actions.Click(Locators.sortBy);
+            foreach (IWebElement button in buttons)
+            {
 
-            actions.Click(Locators.sortByDropdown.lowToHigh);
+            }
         }
 
         [TearDown]
