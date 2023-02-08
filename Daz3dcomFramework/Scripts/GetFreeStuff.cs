@@ -2,9 +2,10 @@ using OpenQA.Selenium;
 
 namespace Daz3dcomFramework.Scripts
 {
-    public class Tests
+    public class getFreeStuff
     {
         readonly Actions actions = new();
+        readonly double price = 0;
 
         [SetUp]
         public void Setup()
@@ -20,20 +21,15 @@ namespace Daz3dcomFramework.Scripts
 
             actions.SignIn();
 
-            actions.SortShopLowToHigh();
-
-            // The free/cheapest items will display, but it'll include items already owned. Refresh the page, then repeat the previous steps to exclude them.
-
-            actions.Refresh();
+            actions.Refresh(); // The free/cheapest items will display, but it'll include items already owned. Refresh the page to exclude them.
 
             actions.SortShopLowToHigh();
 
-            List<IWebElement> buttons = actions.GetAddToCartButtons(actions.GetItemsByPrice(5, actions.ConvertElementCollectionToList(actions.GetElements(Locators.shop.items))));
+            actions.addItemsToCart(actions.GetAddToCartButtons(actions.GetItemsByPrice(price, actions.ConvertElementCollectionToList(actions.GetElements(Locators.shop.items)))));
 
-            foreach (IWebElement button in buttons)
-            {
+            actions.browseToShoppingCart();
 
-            }
+            if (actions.getShoppingCartTotal() > price) Assert.Fail("Shopping cart total isn't $" + price);
         }
 
         [TearDown]

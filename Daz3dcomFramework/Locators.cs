@@ -21,10 +21,21 @@ namespace Daz3dcomFramework
             {
                 public static readonly By priceLowHigh = By.XPath("//option[text()='Price Low-High']");
             }
+            public class addedToCartPopout
+            {
+                public static readonly By close = By.XPath("//span[text()='Close']");
+            }
             public static readonly By items = By.XPath("//li[@class='item']");
             public static readonly By anItemsPrice = By.XPath("//div[contains(@class, '_price')]");
             public static readonly By anItemsAddToCartButton = By.XPath("//div[@class='cart-options']");
+            public static readonly By cart = By.XPath("//a[@class='cart_btn']");
         }
         
+        public class checkout
+        {
+            public static readonly By total = By.XPath("//*[@class='amount-grandtotal']");
+            public static readonly By proceedToBillingInfo = By.XPath("//button[text()='Proceed to Billing Info']");
+            public static readonly By placeOrder = By.XPath("//div[@id='order-summary-container']//button[text()='Place Order']");
+        }
     }
 }
