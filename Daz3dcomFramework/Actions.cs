@@ -28,7 +28,7 @@ namespace Daz3dcomFramework
         public List<IWebElement> GetItemsByPrice(double price, List<IWebElement> items)
         {   
             // If an item's price is higher than the specified price, remove that item.
-            foreach (IWebElement item in items)
+            foreach (IWebElement item in items.ToList())
             {
                 string priceValue = item.FindElement(Locators.shop.anItemsPrice).Text;
                 double individualPrice;
