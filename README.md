@@ -1,5 +1,5 @@
 # [Daz3d.com](https://www.daz3d.com/) Framework
-## This is an automation framework for [Daz3d.com](https://www.daz3d.com/) written in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)), using [Selenium](https://www.selenium.dev/) libraries and [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/). Although not highly applicable, we are also utilizing [NUnit](https://nunit.org/).
+## This is an automation framework for [Daz3d.com](https://www.daz3d.com/) written in [Java](https://en.wikipedia.org/wiki/Java_(programming_language)), using [Selenium](https://www.selenium.dev/) libraries and [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/).
 
 Currently, the purpose of this framework is to maximize the amount of free assets you can get out of [Daz3d.com](https://www.daz3d.com/). We are going about that in two ways:
 
