@@ -7,7 +7,7 @@ Currently, the purpose of this framework is to maximize the amount of free asset
 
 There is no rhyme or reason to determine when free assets is available on [Daz3d.com](https://www.daz3d.com/). We will make a script that will check if anything free is available, add it to the cart, then checkout.
 
-![image](https://user-images.githubusercontent.com/87336074/217617376-d1121feb-e0cc-40fc-9411-c2824e40d416.png)
+![2023-02-28_13-25-13](https://user-images.githubusercontent.com/87336074/221983758-4324a584-fa25-4087-9a5a-8f0845ecc0bb.gif)
 
 ### Maximum utilization of the monthly [Daz+](https://www.daz3d.com/daz-plus) coupon — Completion: 0%
 
