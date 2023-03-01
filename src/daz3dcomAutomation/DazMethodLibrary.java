@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class Actions
+public class DazMethodLibrary
 {
 	WebDriver driver = new EdgeDriver();
 	
@@ -25,9 +25,8 @@ public class Actions
 	{
 		return new WebDriverWait(driver, Duration.ofSeconds(seconds));
 	}
-	public void quit() throws InterruptedException
+	public void quit()
 	{
-		Thread.sleep(5000);
 		driver.quit();
 	}
 	public void click(By by)
@@ -42,10 +41,10 @@ public class Actions
 	{
 		driver.switchTo().frame(clickableElement(by));
 	}
-	public void setUp() throws InterruptedException
+	public void start()
 	{
 		System.setProperty("webdriver.edge.driver", "C:\\driver\\msedgedriver.exe");
 		driver.get("https://www.daz3d.com/shop/");
-		wait(5).until(ExpectedConditions.not(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(ElementMap.loadingPopup))));
+		wait(5).until(ExpectedConditions.not(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(DazElementMap.shop.loadingPopup))));
 	}
 }
