@@ -41,10 +41,13 @@ public class DazMethodLibrary
 	{
 		driver.switchTo().frame(clickableElement(by));
 	}
-	public void start()
+	public void setUp()
 	{
-		System.setProperty("webdriver.edge.driver", "C:\\driver\\msedgedriver.exe");
-		driver.get("https://www.daz3d.com/shop/");
+		System.setProperty(Data.driverKey, Data.driverPath);
+	}
+	public void start()
+	{	
+		driver.get(Data.shopURL);
 		wait(5).until(ExpectedConditions.not(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(DazElementMap.shop.loadingPopup))));
 	}
 }
