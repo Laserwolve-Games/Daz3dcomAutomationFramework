@@ -15,7 +15,15 @@ public class Actions
 	
 	public WebElement clickableElement(By by)
 	{
-		return new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(by));
+		return clickableElement(by, 5);
+	}
+	public WebElement clickableElement(By by, int seconds)
+	{
+		return wait(seconds).until(ExpectedConditions.elementToBeClickable(by));
+	}
+	public WebDriverWait wait(int seconds)
+	{
+		return new WebDriverWait(driver, Duration.ofSeconds(seconds));
 	}
 	public void quit() throws InterruptedException
 	{
@@ -34,11 +42,10 @@ public class Actions
 	{
 		driver.switchTo().frame(clickableElement(by));
 	}
-
 	public void setUp() throws InterruptedException
 	{
-		System.setProperty("webdriver.edge.driver", "C:\\driver\\msedgedriver.exe");		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		openEditor();
+		System.setProperty("webdriver.edge.driver", "C:\\driver\\msedgedriver.exe");
+		driver.get("https://www.daz3d.com/shop/");
+		wait(5).until(ExpectedConditions.not(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(ElementMap.loadingPopup))));
 	}
 }
