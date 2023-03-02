@@ -149,8 +149,8 @@ public class DazMethodLibrary
 		
 		for(WebElement i : cartButtons)
 		{
-			Thread.sleep(5000);
 			click(i);
+			
 			waitUntilElementIsGone(DazElementMap.shop.addingToCartAnimation);
 			
 			click(DazElementMap.shop.addedToCartPopout.close);
