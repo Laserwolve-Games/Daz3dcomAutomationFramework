@@ -6,12 +6,14 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import static com.codeborne.selenide.Selenide.*;
 
 public class DazMethodLibrary
 {
@@ -142,22 +144,29 @@ public class DazMethodLibrary
 	{
 		return stop().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
 	}
-	public void addFreeItemsToCart()
+	public void addFreeItemsToCart() throws InterruptedException
 	{
 		sortStoreLowToHigh();
 		
 		List<WebElement> cartButtons = visibleElements(DazElementMap.shop.addToCartButtonsOfFreeItems);
 		
 		for(WebElement i : cartButtons)
-		{			
-//			actions.scrollToElement(i);
-			
-			stop().until(ExpectedConditions.refreshed(ExpectedConditions.stalenessOf(i)));
+		{
+			Thread.sleep(5000);
 			click(i);
-			
-//			waitUntilElementIsGone(DazElementMap.shop.addingToCartAnimation);
+			waitUntilElementIsGone(DazElementMap.shop.addingToCartAnimation);
 			
 			click(DazElementMap.shop.addedToCartPopout.close);
 		}
 	}
+//	private void retryClick(WebElement i) {
+//		boolean result = false;
+//		int attempts = 0;
+//		while(attempts != 2) try
+//		{
+//			
+//		}
+//		catch(StaleElementReferenceException e) {}
+//		
+//	}
 }

@@ -4,7 +4,7 @@ public class GetFreeItems
 {
 	static DazMethodLibrary dml = new DazMethodLibrary();
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{	
 		try
 		{
