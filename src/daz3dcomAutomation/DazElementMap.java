@@ -4,7 +4,9 @@ import org.openqa.selenium.By;
 
 public class DazElementMap
 {
-    public static final By myAccountIcon = By.xpath("//i[@class='fd fd-my-account']");
+    public static final By myAccountButton = By.xpath("//i[@class='fd fd-my-account']");
+    public static final By myAccountIcon = By.xpath("//a[@id='account_gem']");
+    public static final By cart = By.xpath("//a[@class='cart_btn']");
 
     public static final class AccountDropdown
     {
@@ -16,6 +18,7 @@ public class DazElementMap
     {
     	public static final By loadingPopup = By.xpath("//div[@id='catalog-loading']");
         public static final By sortBy = By.xpath("//select[@name='sort-by']");
+        public static final By addingToCartAnimation = By.xpath("//div[@id='adding-to-cart-animation']");
         
         public static final class sortByDropdown
         {
@@ -25,10 +28,10 @@ public class DazElementMap
         {
             public static final By close = By.xpath("//span[text()='Close']");
         }
-        public static final By items = By.xpath("//li[@class='item']");
+        public static final By addToCartButtonsOfFreeItems = By.xpath("//li[@class='item']//div[contains(@class, '_price') and contains(text(), 'Free')]/..//button[@title='Add to Cart']");
         public static final By anItemsPrice = By.xpath("//div[contains(@class, '_price')]");
-        public static final By anItemsAddToCartButton = By.xpath("//div[@class='cart-options']");
-        public static final By cart = By.xpath("//a[@class='cart_btn']");
+        public static final By anItemsAddToCartButton = By.xpath(".//div[@class='cart-options']");
+        
     }
     public static final class checkout
     {

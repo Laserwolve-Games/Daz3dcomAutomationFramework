@@ -6,7 +6,19 @@ public class GetFreeItems
 
 	public static void main(String[] args)
 	{	
-		dml.start();
-		dml.quit();
+		try
+		{
+			dml.setUp();
+			
+			dml.openShop();
+			
+			dml.logIn();
+			
+			dml.addFreeItemsToCart();
+		}
+		finally
+		{
+			dml.quit();
+		}
 	}
 }
