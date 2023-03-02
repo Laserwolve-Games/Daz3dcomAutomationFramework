@@ -5,7 +5,7 @@ Currently, the purpose of this framework is to maximize the amount of free asset
 
 ### Automate checking for free assets — Completion: 80%
 
-There is no rhyme or reason to determine when free assets is available on [Daz3d.com](https://www.daz3d.com/). We will make a script that will check if anything free is available, add it to the cart, then checkout.
+There is no rhyme or reason to determine when free assets are available on [Daz3d.com](https://www.daz3d.com/). We will make a script that will check if anything free is available, add it to the cart, then checkout.
 
 ![2023-02-28_13-25-13](https://user-images.githubusercontent.com/87336074/221983758-4324a584-fa25-4087-9a5a-8f0845ecc0bb.gif)
 
