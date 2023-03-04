@@ -11,7 +11,7 @@ There is no rhyme or reason to determine when free assets are available on [Daz3
 
 ### Maximum utilization of the monthly [Daz+](https://www.daz3d.com/daz-plus) coupon — Completion: 0%
 
-If you're a [Daz+](https://www.daz3d.com/daz-plus), you'll get a $5 coupon each month, which ironically can't be used on [Daz+](https://www.daz3d.com/daz-plus) assets.
+If you're a [Daz+](https://www.daz3d.com/daz-plus) member, you'll get a $5 coupon each month, which ironically can't be used on [Daz+](https://www.daz3d.com/daz-plus) assets.
 
 ![image](https://user-images.githubusercontent.com/87336074/217616951-e0534e89-9623-4c55-912c-725b82e16b02.png)
 
