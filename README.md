@@ -16,5 +16,3 @@ If you're a [Daz+](https://www.daz3d.com/daz-plus), you'll get a $5 coupon each 
 ![image](https://user-images.githubusercontent.com/87336074/217616951-e0534e89-9623-4c55-912c-725b82e16b02.png)
 
 There's no way to search for non-[Daz+](https://www.daz3d.com/daz-plus) assets, so we will write a script that will scroll through the near-infinite asset list, parsing out assets that meet certain qualifications.
-
-### Feel free to reach out to me on [Discord](https://discord.gg/NxVbvrttgc) or the [email address](mailto:Laserwolve@Gmail.com) on my [GitHub profile](https://github.com/Laserwolve).
